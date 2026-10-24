@@ -38,3 +38,7 @@ college を OpenNext で Cloudflare Workers に載せたテスト版。ブラン
 
 - 切替：Worker → Domains → Add Domain → accel-dash.com、サブドメイン `college`。直後に Slack ログインと、Slack からの通知（/api/slack/events）を確かめる。
 - 戻す：Domains から college.accel-dash.com を外す（DNS の * で Vercel に戻る）。
+
+## 経緯
+
+- 2026-10-24：cloudflare-test を作成。Cloudflare に Worker accel-college-test を作り、Supabase の鍵と SESSION_SECRET を入れた（Slack・Vimeo・Anthropic の鍵は切替の前に入れる）。
