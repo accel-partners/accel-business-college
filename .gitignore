@@ -30,3 +30,8 @@ _to_delete/
 *.tgz
 *.tar.gz
 supabase/.temp/
+
+# Cloudflare（OpenNext・wrangler）
+.open-next
+.wrangler
+.dev.vars*

@@ -1,0 +1,20 @@
+// Cloudflare 版 accel-business-college の設定（Worker 名 accel-college-test）。本番（Vercel・college.accel-dash.com）には影響しない。
+// ステージング（stg.college.accel-dash.com）は Vercel のまま。定期実行（Cron）は書かない。
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "accel-college-test",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // Cloudflare の画面で入れた変数をデプロイのたびに消さない
+  "keep_vars": true,
+  "observability": {
+    "enabled": true
+  }
+}
